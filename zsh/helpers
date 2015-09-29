@@ -7,7 +7,7 @@ environmentuc(){
 }
 
 mainroles(){
-    cat /etc/update-motd.d/95-roles | tail -n+5 | grep -vE '^Instance Type:|^\*\*|^$' | grep -Ev 'common-node|monitoring-client|dog-base|encrypted-storage' | paste -d',' -s -
+    cat /etc/update-motd.d/95-roles | tail -n+6 | grep -E 'Tags:' | grep -vE '^Instance Type:|^\*\*|^$' | grep -Ev 'common-node|monitoring-client|dog-base|encrypted-storage' | paste -d',' -s -
 }
 
 refreshtools(){
@@ -20,7 +20,7 @@ refreshtools(){
 }
 
 deploytools(){
-    rsync -azq --exclude '.jumpbox-tools/.git' --exclude '.oh-my-zsh/.git' ~/.bin ~/.gitconfig ~/.jumpbox-tools ~/.oh-my-zsh ~/.zshenv ~/.zshrc $USER@$1:
+    rsync -azq --exclude '.jumpbox-tools/.git' --exclude '.oh-my-zsh/.git' ~/.bin ~/.jumpbox-tools ~/.oh-my-zsh ~/.zshenv ~/.zshrc $USER@$1:
 }
 
 jr(){
