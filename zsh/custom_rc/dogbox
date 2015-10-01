@@ -1,9 +1,10 @@
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-source $HOME/dogweb/python/bin/activate && cd $HOME/workspace/dogweb
+source $HOME/dogweb/python/bin/activate && cd $HOME/workspace
 export GOPATH=$HOME/workspace/go
 export GOBIN=
 export NODEPATH=$HOME/workspace/dogweb/node_modules
 export PATH=$PATH:$NODEPATH/.bin/:$GOPATH/bin
+export PYTHONPATH=.:/home/vagrant/workspace/data-science
 
 export DD_ENV=dev
 export DOGWEB_DEFAULT_CONFIG_PATH=$HOME/workspace/dogweb/development.ini
