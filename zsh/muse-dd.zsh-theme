@@ -58,7 +58,8 @@ function get_hostname() {
 
 PROMPT='%{$C_RESET%}$(get_hostname):%{$C_DEFAULT%}%~%{$C_RESET%} %{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(git_prompt_status)%{$C_RESET%}%{$C_PROMPT%}ᐅ%{$C_RESET%} '
 
-#RPS1="${return_code}"
+if (( $(term) == "dumb")) then
+   PROMPT='>'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="("
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$GIT_PROMPT_INFO%}) "
