@@ -3,7 +3,7 @@ source $HOME/python/bin/activate
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export NODEPATH=$HOME/dogweb/node_modules
-export PATH=$PATH:$NODEPATH/.bin/:$GOBIN
+export PATH=$PATH:$NODEPATH/.bin/:$HOME/usr/bin:$GOBIN
 
 export DD_ENV=dev
 export DOGWEB_DEFAULT_CONFIG_PATH=$HOME/etc/datadog/development.ini
