@@ -19,3 +19,5 @@ rmlink bin ~/.bin
 # ssh
 rmlink ssh/rc ~/.ssh/rc
 rmlink ssh/config ~/.ssh/config
+chmod 600 .ssh/config
+chmod 600 .ssh/rc
